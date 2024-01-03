@@ -2,26 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.hover\:underline-hover:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px; /* İstenen kalınlık değeri */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.sip{
+  padding-top: 600px;
+}
+.white-header {
+  /* Style your header content with white text color */
+  color: white;
+}
+.kapsa {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
+
+.section {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+/* body {
+  overflow: hidden;
+} */
+.no-scroll {
+  overflow: hidden;
+}
+.foo{
+  margin-top: 850px;
+}
+
